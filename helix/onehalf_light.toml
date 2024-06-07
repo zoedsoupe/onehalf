@@ -1,0 +1,57 @@
+# Author : zoedsoupe (Zoey) <zoey.spessanha@zeetech.io>
+
+# Define the theme properties
+inherits = "default"
+
+# UI elements
+"ui.background" = { bg = "white" }
+"ui.text" = { fg = "black" }
+"ui.cursor" = { fg = "white", bg = "black" }
+"ui.cursorline" = { bg = "light_gray" }
+"ui.selection" = { bg = "dark_gray" }
+"ui.statusline" = { fg = "black", bg = "light_gray" }
+"ui.statusline.inactive" = { fg = "dark_gray", bg = "white" }
+"ui.gutter" = { fg = "dark_gray", bg = "white" }
+"ui.linenr" = { fg = "dark_gray", bg = "white" }
+"ui.linenr.selected" = { fg = "black", bg = "light_gray" }
+"ui.popup" = { fg = "black", bg = "white" }
+
+# Syntax highlighting
+"comment" = { fg = "dark_gray", modifiers = ["italic"] }
+"keyword" = { fg = "magenta" }
+"constant" = { fg = "cyan" }
+"string" = { fg = "green" }
+"function" = { fg = "blue" }
+"type" = { fg = "yellow" }
+"variable" = { fg = "red" }
+
+"attribute" = { fg = "cyan" }
+"operator" = { fg = "black" }
+"punctuation.delimiter" = { fg = "black" }
+"punctuation.bracket" = { fg = "black" }
+
+"builtin" = { fg = "magenta" }
+"parameter" = { fg = "red" }
+"boolean" = { fg = "cyan" }
+"numeric" = { fg = "yellow" }
+"escape" = { fg = "yellow" }
+"regexp" = { fg = "green" }
+
+# Diff highlighting
+"diff.plus" = { fg = "green", bg = "white" }
+"diff.minus" = { fg = "red", bg = "white" }
+"diff.delta" = { fg = "yellow", bg = "white" }
+"diff.moved" = { fg = "blue", bg = "white" }
+
+# Define the color palette
+[palette]
+black = "#383a42"
+red = "#e45649"
+green = "#50a14f"
+yellow = "#c18401"
+blue = "#0184bc"
+magenta = "#a626a4"
+cyan = "#0997b3"
+white = "#fafafa"
+light_gray = "#d0d0d0"
+dark_gray = "#9a9a9a"
