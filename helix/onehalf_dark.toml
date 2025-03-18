@@ -6,42 +6,113 @@ inherits = "default"
 # UI elements
 "ui.background" = { bg = "black" }
 "ui.text" = { fg = "white" }
-"ui.cursor" = { fg = "black", bg = "white" }
-"ui.cursorline" = { bg = "dark_gray" }
-"ui.selection" = { bg = "light_gray" }
-"ui.statusline" = { fg = "white", bg = "dark_gray" }
-"ui.statusline.inactive" = { fg = "light_gray", bg = "black" }
-"ui.gutter" = { fg = "light_gray", bg = "black" }
-"ui.linenr" = { fg = "light_gray", bg = "black" }
-"ui.linenr.selected" = { fg = "white", bg = "dark_gray" }
-"ui.popup" = { fg = "white", bg = "black" }
+"ui.cursor" = { fg = "black", bg = "blue" }
+"ui.cursor.primary" = { fg = "black", bg = "blue" }
+"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"] }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection" }
+"ui.cursorline.primary" = { bg = "cursor_line" }
+"ui.statusline" = { fg = "white", bg = "cursor_line" }
+"ui.statusline.inactive" = { fg = "light_gray", bg = "cursor_line" }
+"ui.statusline.normal" = { fg = "black", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "black", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "black", bg = "magenta", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "light_gray", bg = "cursor_line" }
+"ui.bufferline.active" = { fg = "cursor_line", bg = "blue" }
+"ui.linenr" = { fg = "gutter_fg", bg = "black" }
+"ui.linenr.selected" = { fg = "white", bg = "cursor_line" }
+"ui.popup" = { fg = "white", bg = "light_black" }
+"ui.window" = { fg = "cursor_line" }
+"ui.help" = { fg = "white", bg = "light_black" }
+"ui.virtual" = { fg = "light_gray" }
+"ui.virtual.ruler" = { bg = "cursor_line" }
+"ui.virtual.indent-guide" = { fg = "light_gray" }
+"ui.virtual.whitespace" = { fg = "light_gray" }
+"ui.virtual.inlay-hint" = { fg = "light_gray" }
+"ui.menu" = { fg = "white", bg = "light_black" }
+"ui.menu.selected" = { fg = "black", bg = "blue" }
+"ui.menu.scroll" = { fg = "white", bg = "light_black" }
+"ui.highlight" = { bg = "cursor_line" }
 
 # Syntax highlighting
 "comment" = { fg = "light_gray", modifiers = ["italic"] }
-"keyword" = { fg = "magenta" }
 "constant" = { fg = "cyan" }
+"constant.numeric" = { fg = "yellow" }
+"constant.character.escape" = { fg = "yellow" }
+"constant.builtin" = { fg = "yellow" }
+"constant.builtin.boolean" = { fg = "yellow" }
 "string" = { fg = "green" }
-"function" = { fg = "blue" }
-"type" = { fg = "yellow" }
-"variable" = { fg = "red" }
+"string.regexp" = { fg = "green" }
+"string.special" = { fg = "green" }
 
-"attribute" = { fg = "cyan" }
+"keyword" = { fg = "magenta" }
+"keyword.control" = { fg = "magenta" }
+"keyword.control.import" = { fg = "red" }
+"keyword.function" = { fg = "magenta" }
+"keyword.operator" = { fg = "magenta" }
+"keyword.directive" = { fg = "magenta" }
+"keyword.storage" = { fg = "magenta" }
+"keyword.storage.type" = { fg = "magenta" }
+"keyword.storage.modifier" = { fg = "magenta" }
+
 "operator" = { fg = "white" }
+"punctuation" = { fg = "white" }
 "punctuation.delimiter" = { fg = "white" }
 "punctuation.bracket" = { fg = "white" }
+"punctuation.special" = { fg = "white" }
 
-"builtin" = { fg = "magenta" }
-"parameter" = { fg = "red" }
-"boolean" = { fg = "cyan" }
-"numeric" = { fg = "yellow" }
-"escape" = { fg = "yellow" }
-"regexp" = { fg = "green" }
+"variable" = { fg = "red" }
+"variable.builtin" = { fg = "blue" }
+"variable.parameter" = { fg = "red" }
+"variable.other.member" = { fg = "red" }
 
-# Diff highlighting
+"type" = { fg = "yellow" }
+"type.builtin" = { fg = "yellow" }
+"type.enum.variant" = { fg = "yellow" }
+
+"constructor" = { fg = "blue" }
+"function" = { fg = "blue" }
+"function.builtin" = { fg = "blue" }
+"function.method" = { fg = "blue" }
+"function.macro" = { fg = "magenta" }
+"function.special" = { fg = "blue" }
+
+"tag" = { fg = "red" }
+"attribute" = { fg = "yellow" }
+"namespace" = { fg = "blue" }
+"special" = { fg = "blue" }
+"label" = { fg = "magenta" }
+
+# Markup
+"markup.heading" = { fg = "red" }
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "magenta" }
+"markup.raw" = { fg = "green" }
+"markup.quote" = { fg = "yellow" }
+"markup.list" = { fg = "red" }
+
+# Diagnostics
+"diagnostic" = { underline = { style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "green", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"info" = { fg = "blue", modifiers = ["bold"] }
+"hint" = { fg = "green", modifiers = ["bold"] }
+"warning" = { fg = "yellow", modifiers = ["bold"] }
+"error" = { fg = "red", modifiers = ["bold"] }
+
+# Diff
 "diff.plus" = { fg = "green", bg = "black" }
 "diff.minus" = { fg = "red", bg = "black" }
 "diff.delta" = { fg = "yellow", bg = "black" }
-"diff.moved" = { fg = "blue", bg = "black" }
+"diff.delta.moved" = { fg = "blue", bg = "black" }
 
 # Define the color palette
 [palette]
@@ -54,4 +125,7 @@ magenta = "#c678dd"
 cyan = "#56b6c2"
 white = "#dcdfe4"
 light_gray = "#5c6370"
-dark_gray = "#3e4451"
+gutter_fg = "#919baa"
+cursor_line = "#313640"
+light_black = "#3e4451"
+selection = "#474e5d"
